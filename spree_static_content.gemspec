@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.authors      = ['Peter Berkenbosch', 'Roman Smirnov']
   s.email        = 'peter@pero-ict.nl'
-  s.homepage     = 'https://github.com/spree-contrib/spree_static_content'
+  s.homepage     = 'https://github.com/densonclan/solidus_static_pages'
   s.license      = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")

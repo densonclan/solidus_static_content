@@ -1,8 +1,8 @@
 RSpec.describe StaticPage do
-  context '.remove_spree_mount_point' do
+  context '.remove_solidus_mount_point' do
     specify do
       path = '/hello'
-      expect(subject.remove_spree_mount_point(path)).to eq 'hello'
+      expect(subject.remove_solidus_mount_point(path)).to eq 'hello'
     end
   end
 end
