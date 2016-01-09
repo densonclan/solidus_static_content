@@ -1,7 +1,7 @@
 # Spree Static Content
 
-[![Build Status](https://travis-ci.org/spree-contrib/spree_static_content.svg?branch=master)](https://travis-ci.org/spree-contrib/spree_static_content)
-[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_static_content/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/spree_static_content)
+[![Build Status](https://travis-ci.org/spree-contrib/solidus_static_content.svg?branch=master)](https://travis-ci.org/spree-contrib/solidus_static_content)
+[![Code Climate](https://codeclimate.com/github/spree-contrib/solidus_static_content/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/solidus_static_content)
 
 Good, clean content management of pages for Spree. You can use this to:
 
@@ -21,12 +21,12 @@ In the admin tab, use the 'New page' option to create a new static page.
 The title, slug, body, and meta fields will replace their respective page elements on load. The title, slug and
 body element are all required fields.
 
-Body text provided without a layout / partial being specified will be loaded in the spree_application layout after
+Body text provided without a layout / partial being specified will be loaded in the solidus_application layout after
 it is pulled from the database.
 
 **Layout and Partial Rendering**
 
-To render an entire page without the spree_application layout, specify a relative path to the layout file (eg.
+To render an entire page without the solidus_application layout, specify a relative path to the layout file (eg.
 `spree/layouts/layout_file_name`). This file will not be prefixed with an underscore as it is a layout, not a partial.
 
 To render a partial, specify the path in the layout file name and check the 'Render layout as partial' option. The
@@ -49,13 +49,13 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 Add to your `Gemfile`:
 
 ```ruby
-gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: 'master'
+gem 'solidus_static_content', github: 'spree-contrib/solidus_static_content', branch: 'master'
 ```
 
 Run:
 
 ```sh
-bundle && bundle exec rails g spree_static_content:install
+bundle && bundle exec rails g solidus_static_content:install
 ```
 
 That's all!
@@ -70,8 +70,8 @@ See corresponding [guidelines][2]
 
 Copyright (c) 2008-2015 [Peter Berkenbosch][4] and [contributors][5], released under the [New BSD License][6]
 
-[2]: https://github.com/spree-contrib/spree_static_content/blob/master/CONTRIBUTING.md
-[3]: https://github.com/spree-contrib/spree_static_content/issues
+[2]: https://github.com/spree-contrib/solidus_static_content/blob/master/CONTRIBUTING.md
+[3]: https://github.com/spree-contrib/solidus_static_content/issues
 [4]: https://github.com/peterberkenbosch
-[5]: https://github.com/spree-contrib/spree_static_content/graphs/contributors
-[6]: https://github.com/spree-contrib/spree_static_content/blob/master/LICENSE.md
+[5]: https://github.com/spree-contrib/solidus_static_content/graphs/contributors
+[6]: https://github.com/spree-contrib/solidus_static_content/blob/master/LICENSE.md

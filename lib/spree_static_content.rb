@@ -1,14 +1,14 @@
-require 'spree_core'
-require 'spree_static_content/engine'
-require 'spree_static_content/version'
+require 'solidus_core'
+require 'solidus_static_content/engine'
+require 'solidus_static_content/version'
 require 'coffee_script'
 require 'sass/rails'
 
 module StaticPage
   module_function
 
-  def remove_spree_mount_point(path)
-    regex = Regexp.new '\A' + Rails.application.routes.url_helpers.spree_path
+  def remove_solidus_mount_point(path)
+    regex = Regexp.new '\A' + Rails.application.routes.url_helpers.solidus_path
     path.sub(regex, '').split('?')[0]
   end
 end
