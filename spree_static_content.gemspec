@@ -2,13 +2,13 @@
 lib = File.expand_path('../lib/', __FILE__)
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
-require 'solidus_static_pages/version'
+require 'solidus_static_content/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'solidus_static_content'
   s.version     = SolidusStaticContent.version
-  s.summary     = 'Extention to manage the static pages for your Spree shop.'
+  s.summary     = 'Extention to manage the static pages for your Solidus shop.'
   s.description = s.summary
   s.required_ruby_version = '>= 2.1.0'
 
