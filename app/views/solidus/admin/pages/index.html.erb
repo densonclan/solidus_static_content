@@ -1,5 +1,5 @@
 <% content_for :page_title do %>
-  <%= plural_resource_name(Spree::Page) %>
+  <%= plural_resource_name(Solidus::Page) %>
 <% end %>
 
 <% content_for :page_actions do %>
@@ -16,9 +16,9 @@
     </colgroup>
     <thead>
       <tr data-hook="admin_pages_index_headers">
-        <th><%= Spree::Page.human_attribute_name(:title) %></th>
+        <th><%= Solidus::Page.human_attribute_name(:title) %></th>
         <th><%= Spree.t(:link, scope: :static_content) %></th>
-        <th class="text-center"><%= Spree::Page.human_attribute_name(:visible) %></th>
+        <th class="text-center"><%= Solidus::Page.human_attribute_name(:visible) %></th>
         <th data-hook="admin_pages_index_header_actions" class="actions"></th>
       </tr>
     </thead>
@@ -38,7 +38,7 @@
   </table>
 <% else %>
   <div class="alert alert-warning no-objects-found">
-    <%= Spree.t(:no_resource_found, resource: Spree::Page.model_name.human) %>,
+    <%= Spree.t(:no_resource_found, resource: Solidus::Page.model_name.human) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_page_path %>!
   </div>
 <% end %>

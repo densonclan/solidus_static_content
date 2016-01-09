@@ -1,4 +1,4 @@
-RSpec.describe Spree::PagesHelper, type: :helper do
+RSpec.describe Solidus::PagesHelper, type: :helper do
   context '.render_snippet' do
     it 'returns body when page exists' do
       page = create(:page)

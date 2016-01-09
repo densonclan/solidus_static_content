@@ -1,4 +1,4 @@
-RSpec.describe Spree::Page, type: :model do
+RSpec.describe Solidus::Page, type: :model do
   let!(:page) { create(:page) }
 
   context 'factory' do

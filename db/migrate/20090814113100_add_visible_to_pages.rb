@@ -7,7 +7,7 @@ class AddVisibleToPages < ActiveRecord::Migration
     if Page.table_exists?
       Page.update_all visible: true
     else
-      Spree::Page.update_all visible: true
+      Solidus::Page.update_all visible: true
     end
   end
 

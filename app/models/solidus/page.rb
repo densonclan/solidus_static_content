@@ -1,4 +1,4 @@
-class Spree::Page < ActiveRecord::Base
+class Solidus::Page < ActiveRecord::Base
   default_scope { order(position: :asc) }
 
   has_and_belongs_to_many :stores, join_table: 'solidus_pages_stores'
@@ -20,7 +20,7 @@ class Spree::Page < ActiveRecord::Base
 
   def initialize(*args)
     super(*args)
-    last_page = Spree::Page.last
+    last_page = Solidus::Page.last
     self.position = last_page ? last_page.position + 1 : 0
   end
 
@@ -34,11 +34,11 @@ class Spree::Page < ActiveRecord::Base
     # Ensure that all slugs start with a slash.
     slug.prepend('/') if not_using_foreign_link? && !slug.start_with?('/')
     return if new_record?
-    return unless (prev_position = Spree::Page.find(id).position)
+    return unless (prev_position = Solidus::Page.find(id).position)
     if prev_position > position
-      Spree::Page.where('? <= position and position < ?', position, prev_position).update_all('position = position + 1')
+      Solidus::Page.where('? <= position and position < ?', position, prev_position).update_all('position = position + 1')
     elsif prev_position < position
-      Spree::Page.where('? < position and position <= ?', prev_position, position).update_all('position = position - 1')
+      Solidus::Page.where('? < position and position <= ?', prev_position, position).update_all('position = position - 1')
     end
   end
 

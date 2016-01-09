@@ -6,7 +6,7 @@ module Spree
     layout :determine_layout
 
     def show
-      @page = Spree::Page.by_store(current_store).visible.find_by_slug!(request.path)
+      @page = Solidus::Page.by_store(current_store).visible.find_by_slug!(request.path)
     end
 
     private

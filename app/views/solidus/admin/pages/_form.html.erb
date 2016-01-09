@@ -1,5 +1,5 @@
 <% content_for :page_actions do %>
-  <%= button_link_to Spree.t(:back_to_resource_list, resource: plural_resource_name(Spree::Page)), spree.admin_pages_path, icon: 'arrow-left', class: 'btn-primary' %>
+  <%= button_link_to Spree.t(:back_to_resource_list, resource: plural_resource_name(Solidus::Page)), spree.admin_pages_path, icon: 'arrow-left', class: 'btn-primary' %>
 <% end %>
 
 <%= form_for [:admin, resource] do |f| %>
@@ -43,35 +43,35 @@
       <div class="checkbox">
         <%= f.label :show_in_sidebar do %>
           <%= f.check_box :show_in_sidebar %>
-          <%= Spree::Page.human_attribute_name(:show_in_sidebar) %>
+          <%= Solidus::Page.human_attribute_name(:show_in_sidebar) %>
         <% end %>
       </div>
 
       <div class="checkbox">
         <%= f.label :show_in_header do %>
           <%= f.check_box :show_in_header %>
-          <%= Spree::Page.human_attribute_name(:show_in_header) %>
+          <%= Solidus::Page.human_attribute_name(:show_in_header) %>
         <% end %>
       </div>
 
       <div class="checkbox">
         <%= f.label :show_in_footer do %>
           <%= f.check_box :show_in_footer %>
-          <%= Spree::Page.human_attribute_name(:show_in_footer) %>
+          <%= Solidus::Page.human_attribute_name(:show_in_footer) %>
         <% end %>
       </div>
 
       <div class="checkbox">
         <%= f.label :visible do %>
           <%= f.check_box :visible %>
-          <%= Spree::Page.human_attribute_name(:visible) %>
+          <%= Solidus::Page.human_attribute_name(:visible) %>
         <% end %>
       </div>
 
       <div class="checkbox">
         <%= f.label :render_layout_as_partial do %>
           <%= f.check_box :render_layout_as_partial %>
-          <%= Spree::Page.human_attribute_name(:render_layout_as_partial) %>
+          <%= Solidus::Page.human_attribute_name(:render_layout_as_partial) %>
         <% end %>
       </div>
 

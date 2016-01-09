@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :page, class: Spree::Page do
+  factory :page, class: Solidus::Page do
     title { generate(:random_string) }
     body  { generate(:random_description) }
 
